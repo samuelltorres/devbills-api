@@ -12,6 +12,6 @@ export class Category {
   constructor({ id, title, color }: CategoryProps) {
     this.id = id;
     this.title = title;
-    this.color = color;
+    this.color = color.toUpperCase();
   }
 }
