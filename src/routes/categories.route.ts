@@ -8,6 +8,7 @@ export const categoriesRoutes = Router();
 
 const controller = new CategoriesController();
 
+categoriesRoutes.get('/', controller.index);
 categoriesRoutes.post(
   '/',
   validator({
