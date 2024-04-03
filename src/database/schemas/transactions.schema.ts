@@ -13,7 +13,7 @@ const TransactionSchema = new mongoose.Schema(
   { versionKey: false },
 );
 
-export const TransactionsModel = mongoose.model(
+export const TransactionModel = mongoose.model(
   'Transaction',
   TransactionSchema,
 );
