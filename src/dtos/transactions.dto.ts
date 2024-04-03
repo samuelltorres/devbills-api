@@ -6,7 +6,7 @@ export const createTransactionsSchema = {
   title: z.string(),
   amount: z.number().int().positive(),
   type: z.nativeEnum(TransactionType),
-  data: z.coerce.date(),
+  date: z.coerce.date(),
   categoryId: z.string(),
 };
 
