@@ -9,3 +9,6 @@ export const createTransactionsSchema = {
   data: z.coerce.date(),
   categoryId: z.string(),
 };
+
+const createTransactionoObject = z.object(createTransactionsSchema);
+export type CreateTransactionDTO = z.infer<typeof createTransactionoObject>;
