@@ -1,4 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
+import { StatusCodes } from 'http-status-codes';
 import { z } from 'zod';
 
 import { CategoriesRepository } from '../database/repositories/categories.repository';
@@ -12,13 +13,6 @@ export class CategoriesController {
     next: NextFunction,
   ) {
     try {
-      const validateSchema = z.object({
-        title: z.string(),
-        color: z.string().regex(/^#[A-Fa-f0-9]{6}$/),
-      });
-
-      validateSchema.parse(req.body);
-
       const { title, color } = req.body;
 
       const repository = new CategoriesRepository(CategoryModel);
@@ -27,7 +21,7 @@ export class CategoriesController {
 
       const result = await service.create({ title, color });
 
-      return res.status(201).json(result);
+      return res.status(StatusCodes.CREATED).json(result);
     } catch (err) {
       next(err);
     }
