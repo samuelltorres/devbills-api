@@ -5,7 +5,7 @@
     - nome, cor
     - não é possivel criar categoria com o mesmo nome
 
-## Listar as categorias [❌]
+## Listar as categorias [ DONE ✅]
 
 ## Criar transaçoes [❌]
 
