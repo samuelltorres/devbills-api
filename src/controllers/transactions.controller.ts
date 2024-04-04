@@ -28,4 +28,14 @@ export class TransactionsController {
       next(err);
     }
   };
+
+  index = async (req: Request, res: Response, next: NextFunction) => {
+    try {
+      const result = await this.transactionsService.index();
+
+      return res.status(StatusCodes.OK).json(result);
+    } catch (err) {
+      next(err);
+    }
+  };
 }
