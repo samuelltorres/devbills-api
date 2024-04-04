@@ -8,12 +8,13 @@ import {
   getFinancialEvolutionDTO,
 } from '../dtos/transactions.dto';
 import { TransactionsService } from '../services/transactions.service';
+import { BodyRequest, QueryRequest } from './types';
 
 export class TransactionsController {
   constructor(private transactionsService: TransactionsService) {}
 
   create = async (
-    req: Request<unknown, unknown, CreateTransactionDTO>,
+    req: BodyRequest<CreateTransactionDTO>,
     res: Response,
     next: NextFunction,
   ) => {
@@ -35,7 +36,7 @@ export class TransactionsController {
   };
 
   index = async (
-    req: Request<unknown, unknown, unknown, IndexTransactionsDTO>,
+    req: QueryRequest<IndexTransactionsDTO>,
     res: Response,
     next: NextFunction,
   ) => {
@@ -55,7 +56,7 @@ export class TransactionsController {
   };
 
   getDashboard = async (
-    req: Request<unknown, unknown, unknown, getDashboardDTO>,
+    req: QueryRequest<getDashboardDTO>,
     res: Response,
     next: NextFunction,
   ) => {
@@ -73,7 +74,7 @@ export class TransactionsController {
   };
 
   getFinanccialEvolution = async (
-    req: Request<unknown, unknown, unknown, getFinancialEvolutionDTO>,
+    req: QueryRequest<getFinancialEvolutionDTO>,
     res: Response,
     next: NextFunction,
   ) => {
