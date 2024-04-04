@@ -42,6 +42,7 @@
     - Mongoose
     - HTTPStatusCode
     - Zod
+    - Cors
 
 # arquitetura
 
