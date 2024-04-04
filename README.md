@@ -21,7 +21,7 @@
 
     - por período (inicio e fim)
 
-## Dados de despesas por categoria com filtros [❌]
+## Dados de despesas por categoria com filtros [DONE ✅]
 
     - por período (inicio e fim)
 
