@@ -17,7 +17,7 @@
     - por período (inicio e fim)
     - por categoria
 
-## Dados de saldo com filtros [❌]
+## Dados de saldo com filtros [DONE ✅]
 
     - por período (inicio e fim)
 
