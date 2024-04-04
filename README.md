@@ -25,11 +25,14 @@
 
     - por período (inicio e fim)
 
-## Dados de balanço geral do ano com filtros [❌]
+## Dados de balanço geral do ano com filtros [DONE ✅]
 
     - por ano
 
 ---
+
+
+
 
 # Tecnologias utilizadas
 
