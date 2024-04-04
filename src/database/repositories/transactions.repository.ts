@@ -45,8 +45,6 @@ export class TransactionsRepository {
       };
     }
 
-    console.log(whereParams);
-
     const transactions = await this.model.find(whereParams);
 
     const transactionsMap = transactions.map((item) =>
